@@ -3,6 +3,8 @@
 require 'json'
 require 'open-uri'
 
+Movie.destroy_all
+
 url = 'http://tmdb.lewagon.com/movie/top_rated'
 serialized_movies = URI.open(url).read
 movie = JSON.parse(serialized_movies)
@@ -10,7 +12,7 @@ movie['results'].each do |movie|
   Movie.create(
     title: movie['original_title'],
     overview: movie['overview'],
-    poster_url: movie['poster_path'],
+    poster_url: "https://image.tmdb.org/t/p/original/#{movie['poster_path']}",
     rating: movie['vote_average']
   )
 end

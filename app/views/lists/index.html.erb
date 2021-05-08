@@ -1,0 +1,17 @@
+<div class="index-banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.3)), url(https://source.unsplash.com/atsUqIm3wxo);">
+  <div class="my-container">
+    <h1>Save your favourite movies</h1>
+    <%= link_to "Make your list now", new_list_path, class: "blue-btn" %>
+  </div>
+  <div class="arrow"><i class="fas fa-arrow-circle-down"></i></div>
+</div>
+<div class="container">
+  <div class="row justify-content-space-around">
+    <div class="col-4">
+      <%= @lists.each do |list| %>
+        <%= list.name %>
+      <% end %>
+      <p>testing testing testing testing testing testing testing</p>
+    </div>
+  </div>
+</div>

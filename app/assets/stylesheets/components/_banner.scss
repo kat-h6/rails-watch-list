@@ -1,0 +1,29 @@
+.index-banner {
+  height: 100vh;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 300px 100px;
+  text-shadow: 2px 2px 3px rgba(0,0,0,0.5);
+}
+
+.my-container {
+  text-align: center;
+}
+
+.blue-btn {
+  margin-top: 16px;
+  text-decoration: none;
+  color: $blue;
+  border: 1px solid $blue;
+  border-radius: 50px;
+  transition: color 0.3s ease;
+  padding: 8px 16px;
+
+  &:hover {
+    color: white;
+    border: 1px solid white;
+    text-decoration: none;
+  }
+}
