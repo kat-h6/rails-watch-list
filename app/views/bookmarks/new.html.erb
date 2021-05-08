@@ -1,12 +1,12 @@
 <div class="container">
   <div class="row">
     <div class="col-6 m-auto">
-      <div class="list-form">
-        <h1 class="list-title">Add a new bookmark for <%= @list.name %></h1>
+      <div class="basic-form">
+        <h1 class="basic-title">Add a new bookmark for <%= @list.name %></h1>
         <%= simple_form_for [@list, @bookmark] do |f| %>
           <%= f.input :comment %>
           <%= f.association :movie %>
-          <%= f.button :submit %>
+          <%= f.button :submit, class: "btn btn-primary" %>
         <% end %>
       </div>
       <%= link_to 'back', lists_path %>

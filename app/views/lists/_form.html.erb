@@ -1,7 +1,6 @@
 
 <%= simple_form_for @list do |f| %>
   <%= f.input :name %>
-  <%= f.association :movies %>
-  <%= f.button :submit %>
+  <%= f.button :submit, class: "btn btn-primary" %>
 <% end %>
 

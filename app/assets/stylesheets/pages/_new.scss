@@ -1,23 +1,14 @@
-.bookmark-form {
+.basic-form {
   background: $light-gray;
   padding: 24px;
   border-radius: 4px;
-  margin-top: 24px;
+  margin-top: 64px;
 }
 
-.bookmark-form h1 {
-  padding-right: 1.5em;
-}
-
-.bookmark-submit-btn {
+.basic-submit-btn {
   margin-top: 8px;
 }
 
 body {
   background: white;
-}
-
-.bookmark-title {
-  padding-right: 0.75rem;
-  padding-left: 1.25rem;
 }

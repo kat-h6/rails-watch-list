@@ -9,7 +9,9 @@
   <div class="row justify-content-space-around">
     <div class="col-4">
       <%= @lists.each do |list| %>
-        <%= list.name %>
+        <div class="list-card">
+          <%= link_to list.name, list_path(list) %>
+        </div>
       <% end %>
       <p>testing testing testing testing testing testing testing</p>
     </div>
