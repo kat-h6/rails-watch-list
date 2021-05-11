@@ -8,7 +8,7 @@
 <div class="container">
   <div class="row justify-content-space-around">
     <div class="col-4">
-      <%= @lists.each do |list| %>
+      <% @lists.each do |list| %>
         <div class="list-card">
           <%= link_to list.name, list_path(list) %>
         </div>
