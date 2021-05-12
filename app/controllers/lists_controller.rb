@@ -18,6 +18,7 @@ class ListsController < ApplicationController
 
   def show
     set_list
+    @bookmark = Bookmark.new
   end
 
   private
