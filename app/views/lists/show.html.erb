@@ -19,7 +19,7 @@
   <div class="row">
     <div class="col-6 m-auto">
       <div class="basic-form">
-        <h1 class="basic-title">Add a new bookmark for <%= @list.name %></h1>
+        <h1 class="basic-title">Add a movie to the list <%= @list.name %></h1>
         <%= simple_form_for [@list, @bookmark] do |f| %>
           <%= f.input :comment %>
           <%= f.association :movie %>
@@ -30,4 +30,3 @@
     </div>
   </div>
 </div>
-

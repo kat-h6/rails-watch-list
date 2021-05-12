@@ -5,15 +5,24 @@
   margin-left: 20px;
   display: flex;
   margin-top: 100px;
+}
 
-  a {
-    font-size: 24px;
-    color: white;
-    text-decoration: none;
+#list-name {
+  font-size: 24px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+}
+
+#my-card-container {
+  padding-top: 100px;
+  text-align: center;
+
+  h1 {
+    font-family: 'Lora', serif;
   }
 }
 
-.my-card-container {
-  margin-top: 100px;
-  text-align: center;
+html {
+  scroll-behavior: smooth;
 }

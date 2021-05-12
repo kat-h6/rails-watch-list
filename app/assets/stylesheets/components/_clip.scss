@@ -1,0 +1,25 @@
+#blue-clip {
+  height: 100%;
+  width: 100%;
+  background-color: $blue;
+  clip-path: polygon(0 75%, 100% 7%, 100% 100%, 0 100%);
+  position: absolute;
+  display: flex;
+
+  img {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    margin-bottom: 0;
+    align-items: flex-end;
+    filter: grayscale(100%);
+  }
+}
+
+.pink-container {
+  background-color: #f7d9d9;
+  height: 100vh;
+  z-index: -3;
+  margin-top: 0;
+}
