@@ -14,3 +14,37 @@
   }
 }
 
+#form-container {
+  margin-bottom: 300px;
+}
+
+.review-box {
+  text-align: center;
+  background-color: $pink;
+  height: 48px;
+  width: 400px;
+  flex-grow: 1;
+  margin-right: 16px;
+  margin-left: 16px;
+}
+
+.reviews {
+  margin-top: 100px;
+  text-align: center;
+
+  h1 {
+    font-family: 'Lora', serif;
+  }
+}
+
+.movie-form {
+  margin-right: 16px;
+  margin-left: 32px;
+  flex-grow: 1;
+}
+
+.review-form {
+  margin-right: 32px;
+  margin-left: 16px;
+  flex-grow: 1;
+}

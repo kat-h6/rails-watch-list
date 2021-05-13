@@ -1,6 +1,7 @@
 <div class="show-container">
   <h1>Bookmarked Movies in <%= @list.name %></h1>
-  <a href="#form-container" class="green-btn">Add a movie</a>
+  <a href="#form-container" class="blue-btn">Add a movie</a>
+  <a href="#form-container" class="green-btn">Add a review</a>
   <ul>
     <div class="row">
       <% @list.movies.each do |movie| %>
@@ -23,18 +24,49 @@
   </ul>
 </div>
 
+<div class="reviews">
+  <h1 class="basic-title">Reviews (<%= @list.reviews.length %>) : </h1>
+  <div class="row">
+    <% @list.reviews.each do |review| %>
+      <div class="col-xs-12 col-md-4">
+        <div class="review-box">
+          <p><strong><%= review.comment %></strong> ⭐️<%= review.rating %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
 <div id="form-container">
   <div class="row">
-    <div class="col-6 m-auto">
+    <div class="col-xs-12 col-md-6">
+      <div class="movie-form">
+        <div class="basic-form">
+          <h1 class="basic-title">Add a movie</h1>
+          <%= simple_form_for [@list, @bookmark] do |f| %>
+            <%= f.input :comment %>
+            <%= f.association :movie %>
+            <%= f.button :submit, class: "btn btn-primary" %>
+          <% end %>
+        </div>
+        <%= link_to 'back', lists_path %>
+      </div>
+    </div>
+  <div class="col-xs-12 col-md-6">
+    <div class="review-form">
       <div class="basic-form">
-        <h1 class="basic-title">Add a movie to <%= @list.name %></h1>
-        <%= simple_form_for [@list, @bookmark] do |f| %>
+        <h1 class="basic-title">Add a review</h1>
+        <%= simple_form_for [@list, @review] do |f| %>
           <%= f.input :comment %>
-          <%= f.association :movie %>
+          <%= f.input :rating %>
           <%= f.button :submit, class: "btn btn-primary" %>
         <% end %>
       </div>
       <%= link_to 'back', lists_path %>
+      </div>
     </div>
   </div>
 </div>
+
+
+

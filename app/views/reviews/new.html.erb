@@ -1,0 +1,20 @@
+<div class="pink-container">
+<div id="blue-clip">
+  <img src="https://image.tmdb.org/t/p/original//tlEFuIlaxRPXIYVHXbOSAMCfWqk.jpg" alt="forrest gump movie poster">
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-6 m-auto">
+      <div class="basic-form">
+        <h1 class="basic-title">Add a new review for <%= @list.name %></h1>
+        <%= simple_form_for [@list, @review] do |f| %>
+          <%= f.input :comment %>
+          <%= f.input :rating %>
+          <%= f.button :submit, class: "btn btn-primary" %>
+        <% end %>
+      </div>
+      <%= link_to 'back', lists_path %>
+    </div>
+  </div>
+</div>
+</div>
